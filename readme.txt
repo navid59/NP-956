@@ -60,3 +60,6 @@ Please note that **on first update** your `private.key` and `public.cer` could b
 = 1.3 = 
 * keep keys on auto update
 * add openssl aes256 cipher option
+= 1.4 = 
+* compatible with WooCommerce blocks
+* fix auto inactive
