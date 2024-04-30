@@ -124,14 +124,12 @@ function ntpUpgrade_complete($upgrader_object, $options) {
     add_option( 'woocommerce_netopiapayments_certifications', 'verify-and-regenerate' );
 }
 
-// Hook into the uninstall action
+
+/**
+ * Deactive the plugin, before uninstall the plugin
+ */
 register_uninstall_hook(__FILE__, 'ntpUninstall');
-// Function to run when the plugin is uninstalled
 function ntpUninstall() {
-	echo "<pre>";
-	var_dump("TEST TEST TEST ");
-	echo "</pre>";
-	die();
     // Deactivate the plugin
    deactivate_plugins(plugin_basename(__FILE__));
 }
